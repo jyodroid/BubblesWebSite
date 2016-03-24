@@ -38,7 +38,7 @@ module.exports = function (grunt) {
         tasks: ['wiredep']
       },
       js: {
-        files: ['<%= yeoman.app %>/scripts/{,*/}*.js'],
+        files: ['<%= yeoman.app %>/scripts/{,*/}*.js', '<%= yeoman.app %>/javascript/{,*/}*.*'],
         tasks: ['newer:jshint:all', 'newer:jscs:all'],
         options: {
           livereload: '<%= connect.options.livereload %>'
@@ -127,7 +127,8 @@ module.exports = function (grunt) {
       all: {
         src: [
           'Gruntfile.js',
-          '<%= yeoman.app %>/scripts/{,*/}*.js'
+          '<%= yeoman.app %>/scripts/{,*/}*.js',
+          '<%= yeoman.app %>/javascript/{,*/}*.js'
         ]
       },
       test: {
@@ -147,7 +148,8 @@ module.exports = function (grunt) {
       all: {
         src: [
           'Gruntfile.js',
-          '<%= yeoman.app %>/scripts/{,*/}*.js'
+          '<%= yeoman.app %>/scripts/{,*/}*.js',
+          '<%= yeoman.app %>/javascript/{,*/}*.js'
         ]
       },
       test: {
@@ -381,8 +383,10 @@ module.exports = function (grunt) {
             '*.html',
             'images/{,*/}*.{webp}',
             'styles/fonts/{,*/}*.*',
-            'javascript/{,*/}*.*',
-            'font-awesome/{,*/}*.*'
+            'styles/{,*/}*.gif',
+            'font-awesome/{,*/}*.*',
+            'mail/{,*/}*.*',
+            'javascript/{,*/}*.js'
           ]
         }, {
           expand: true,

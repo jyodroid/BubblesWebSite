@@ -4,7 +4,9 @@ body {
 }
 
 .text-muted {
-  color: #777
+  color: #777;
+  text-align: justify;
+  text-justify: inter-word;
 }
 
 .text-primary {
@@ -34,7 +36,6 @@ a:hover, a:focus, a:active, a.active {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
-  text-transform: uppercase;
   font-weight: 700
 }
 
@@ -55,7 +56,6 @@ h1, h2, h3, h4, h5, h6 {
   background-color: #fcfe64;
   border-color: #fcfe64;
   font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
-  text-transform: uppercase;
   font-weight: 700
 }
 
@@ -84,7 +84,6 @@ h1, h2, h3, h4, h5, h6 {
   background-color: #fcfe64;
   border-color: #fcfe64;
   font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
-  text-transform: uppercase;
   font-weight: 700;
   border-radius: 3px;
   font-size: 18px;
@@ -119,6 +118,7 @@ h1, h2, h3, h4, h5, h6 {
 .navbar-default .navbar-brand {
   color: #51e1fe;
   font-family: "Roboto Slab";
+  text-shadow: 2px 2px #fcfe64;
   font-weight: bold;
 }
 
@@ -148,7 +148,7 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Roboto Slab";
   font-weight: 800;
   letter-spacing: 1px;
-  font-size: large;
+  font-size: 1.7em;
   color: #51e1fe
 }
 
@@ -159,12 +159,12 @@ h1, h2, h3, h4, h5, h6 {
 
 .navbar-default .navbar-nav > .active > a {
   border-radius: 0;
-  color: #fff;
+  color: #3293fe;
   background-color: #fcfe64
 }
 
 .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
-  color: #fff;
+  color: #3293fe;
   background-color: #fcfe64
 }
 
@@ -187,8 +187,12 @@ h1, h2, h3, h4, h5, h6 {
     border: 0
   }
 
+  .social-buttons li a span {
+    display: none;
+  }
+
   .navbar-default .navbar-brand {
-    font-size: 2em;
+    font-size: 3.1em;
     -webkit-transition: all .3s;
     -moz-transition: all .3s;
     transition: all .3s
@@ -204,8 +208,24 @@ h1, h2, h3, h4, h5, h6 {
   }
 
   .navbar-default.navbar-shrink .navbar-brand {
-    font-size: 3.5em
+    font-size: 2.8em;
+    text-shadow: 2px 2px #3293fe
   }
+
+  .modal-body {
+    background-image: url("../images/photo-albums.png");
+    background-size: 600px 400px;
+    -moz-background-size: 600px 400px;
+    -webkit-background-size: 600px 400px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+
+.modal-body h2 {
+  color: #5e5e5e;
+  font-size: smaller;
+  font-family: 'Indie Flower', cursive
 }
 
 .collapse .navbar-collapse {
@@ -229,7 +249,7 @@ header .intro-text {
   padding-bottom: 50px
 }
 
-div.intro-lead-in{
+div.intro-lead-in {
   padding: 0px;
   margin: 0px;
 }
@@ -242,6 +262,7 @@ header .intro-text .intro-lead-in img {
 header .intro-text .intro-heading {
   font-family: "Open Sans Condensed";
   font-weight: 500;
+  text-shadow: 3px 3px #3293fe;
   font-size: 30px;
   color: #fcfe64;
   line-height: 50px;
@@ -257,7 +278,7 @@ header .intro-text .intro-heading {
     background-position: center left;
   }
 
-  div.intro-lead-in{
+  div.intro-lead-in {
     padding: 0px;
     margin: 0px;
   }
@@ -280,9 +301,12 @@ section {
 }
 
 section h2.section-heading {
+  color: #fcfe64;
+  margin-bottom: 100px;
+  text-shadow: 3px 3px #3293fe;
   font-size: 40px;
   margin-top: 0;
-  margin-bottom: 15px
+  margin-bottom: 100px
 }
 
 section h3.section-subheading {
@@ -305,19 +329,19 @@ section h3.section-subheading {
   text-transform: none
 }
 
-#portfolio .portfolio-item {
+#catalogo .catalogo-item {
   margin: 0 0 15px;
   right: 0
 }
 
-#portfolio .portfolio-item .portfolio-link {
+#catalogo .catalogo-item .catalogo-link {
   display: block;
   position: relative;
   max-width: 400px;
   margin: 0 auto
 }
 
-#portfolio .portfolio-item .portfolio-link .portfolio-hover {
+#catalogo .catalogo-item .catalogo-link .catalogo-hover {
   background: rgba(252, 254, 100, .9);
   position: absolute;
   width: 100%;
@@ -328,11 +352,11 @@ section h3.section-subheading {
   -moz-transition: all ease .5s
 }
 
-#portfolio .portfolio-item .portfolio-link .portfolio-hover:hover {
+#catalogo .catalogo-item .catalogo-link .catalogo-hover:hover {
   opacity: 1
 }
 
-#portfolio .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content {
+#catalogo .catalogo-item .catalogo-link .catalogo-hover .catalogo-hover-content {
   position: absolute;
   width: 100%;
   height: 20px;
@@ -343,15 +367,15 @@ section h3.section-subheading {
   color: #51e1fe
 }
 
-#portfolio .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content i {
+#catalogo .catalogo-item .catalogo-link .catalogo-hover .catalogo-hover-content i {
   margin-top: -12px
 }
 
-#portfolio .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content h3, #portfolio .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content h4 {
+#catalogo .catalogo-item .catalogo-link .catalogo-hover .catalogo-hover-content h3, #catalogo .catalogo-item .catalogo-link .catalogo-hover .catalogo-hover-content h4 {
   margin: 0
 }
 
-#portfolio .portfolio-item .portfolio-caption {
+#catalogo .catalogo-item .catalogo-caption {
   max-width: 400px;
   margin: 0 auto;
   background-color: #51e1fe;
@@ -359,26 +383,30 @@ section h3.section-subheading {
   padding: 25px
 }
 
-#portfolio .portfolio-item .portfolio-caption h4 {
+#catalogo .catalogo-item .catalogo-caption h4 {
+  color: #fcfe64;
+  font-size: 1.8em;
+  text-shadow: 2px 2px #3293fe;
   text-transform: none;
   margin: 0
 }
 
-#portfolio .portfolio-item .portfolio-caption p {
+#catalogo .catalogo-item .catalogo-caption p {
   font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-style: italic;
   font-size: 16px;
   margin: 0
 }
 
-#portfolio * {
+#catalogo * {
   z-index: 2
 }
 
 @media (min-width: 767px) {
-  #portfolio .portfolio-item {
+  #catalogo .catalogo-item {
     margin: 0 0 30px
   }
+
   header {
     background-position: center left;
   }
@@ -619,8 +647,8 @@ aside.clients img {
 }
 
 section#contact {
-  background-color: #ffcfe9;
-  background-image: url(../img/map-image.png);
+  background-color: #ff9bb3;
+  background-image: url(../images/map-image.png);
   background-position: center;
   background-repeat: no-repeat
 }
@@ -652,28 +680,24 @@ section#contact .form-control:focus {
 
 section#contact ::-webkit-input-placeholder {
   font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
-  text-transform: uppercase;
   font-weight: 700;
   color: #bbb
 }
 
 section#contact :-moz-placeholder {
   font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
-  text-transform: uppercase;
   font-weight: 700;
   color: #bbb
 }
 
 section#contact ::-moz-placeholder {
   font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
-  text-transform: uppercase;
   font-weight: 700;
   color: #bbb
 }
 
 section#contact :-ms-input-placeholder {
   font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
-  text-transform: uppercase;
   font-weight: 700;
   color: #bbb
 }
@@ -690,15 +714,18 @@ footer {
 footer span.copyright {
   line-height: 40px;
   font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
-  text-transform: uppercase;
   text-transform: none
+}
+
+.slick-prev:before,
+.slick-next:before {
+  color: #444444;
 }
 
 footer ul.quicklinks {
   margin-bottom: 0;
   line-height: 40px;
   font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
-  text-transform: uppercase;
   text-transform: none
 }
 
@@ -706,7 +733,7 @@ ul.social-buttons {
   margin-bottom: 0
 }
 
-.intro-text ul.social-buttons{
+.intro-text ul.social-buttons {
   position: fixed;
   bottom: 0px;
   right: 0px;
@@ -736,7 +763,14 @@ ul.social-buttons li a:hover, ul.social-buttons li a:focus, ul.social-buttons li
   outline: 0
 }
 
-.portfolio-modal .modal-content {
+.catalogo-modal .modal-content {
+  background-image: url(../images/fondomaderagrande.jpg);
+  background-attachment: scroll;
+  background-position: center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
   border-radius: 0;
   background-clip: border-box;
   -webkit-box-shadow: none;
@@ -747,32 +781,32 @@ ul.social-buttons li a:hover, ul.social-buttons li a:focus, ul.social-buttons li
   text-align: center
 }
 
-.portfolio-modal .modal-content h2 {
+.catalogo-modal .modal-content h2 {
   margin-bottom: 15px;
   font-size: 3em
 }
 
-.portfolio-modal .modal-content p {
+.catalogo-modal .modal-content p {
   margin-bottom: 30px
 }
 
-.portfolio-modal .modal-content p.item-intro {
+.catalogo-modal .modal-content p.item-intro {
   margin: 20px 0 30px;
   font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-style: italic;
   font-size: 16px
 }
 
-.portfolio-modal .modal-content ul.list-inline {
+.catalogo-modal .modal-content ul.list-inline {
   margin-bottom: 30px;
   margin-top: 0
 }
 
-.portfolio-modal .modal-content img {
+.catalogo-modal .modal-content img {
   margin-bottom: 30px
 }
 
-.portfolio-modal .close-modal {
+.catalogo-modal .close-modal {
   position: absolute;
   width: 75px;
   height: 75px;
@@ -782,11 +816,11 @@ ul.social-buttons li a:hover, ul.social-buttons li a:focus, ul.social-buttons li
   cursor: pointer
 }
 
-.portfolio-modal .close-modal:hover {
+.catalogo-modal .close-modal:hover {
   opacity: .3
 }
 
-.portfolio-modal .close-modal .lr {
+.catalogo-modal .close-modal .lr {
   height: 75px;
   width: 1px;
   margin-left: 35px;
@@ -797,7 +831,22 @@ ul.social-buttons li a:hover, ul.social-buttons li a:focus, ul.social-buttons li
   z-index: 1051
 }
 
-.portfolio-modal .close-modal .lr .rl {
+.modal-body {
+  background-color: white;
+  box-shadow: 10px 10px 5px rgba(2, 2, 2, 0.28);
+  -webkit-box-shadow: 10px 10px 5px rgba(2, 2, 2, 0.28);
+  -moz-box-shadow: 110px 10px 5px rgba(2, 2, 2, 0.28);
+  text-align: center;
+  font-size: x-small;
+}
+
+.modal-body img {
+  max-width: 100%;
+  width: 700px;
+  height: 550px;
+}
+
+.catalogo-modal .close-modal .lr .rl {
   height: 75px;
   width: 1px;
   background-color: #222;
@@ -807,7 +856,7 @@ ul.social-buttons li a:hover, ul.social-buttons li a:focus, ul.social-buttons li
   z-index: 1052
 }
 
-.portfolio-modal .modal-backdrop {
+.catalogo-modal .modal-backdrop {
   opacity: 0;
   display: none
 }
