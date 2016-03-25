@@ -175,6 +175,16 @@ h1, h2, h3, h4, h5, h6 {
     font-size: medium;
     color: #51e1fe
   }
+
+  .modal-body {
+    background-image: url("../images/photo-albums-mobile.png");
+    background-size: 400px 300px;
+    -moz-background-size: 400px 300px;
+    -webkit-background-size: 400px 300px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
 }
 
 @media (min-width: 768px) {
