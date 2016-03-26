@@ -27,6 +27,7 @@
   <!-- build:css(.tmp) styles/main.css -->
   <link rel="stylesheet" href="styles/main.css">
   <!-- endbuild -->
+  <script src='https://www.google.com/recaptcha/api.js'></script>
 </head>
 <body ng-app="bubblesdbApp" id="page-top" class="index">
 <!--[if lte IE 8]>
@@ -83,7 +84,7 @@
 <header>
   <div class="container">
     <div class="intro-text">
-      <div class="intro-lead-in"><img src="images/bubbles_logo.png"/></div>
+      <div class="intro-lead-in"><img src="images/bubbles_logo.png" alt="logo bubbles"/></div>
       <div class="intro-heading">Marcamos la diferencia desde sus primeros pasos</div>
       <ul class="list-inline social-buttons">
         <li><a href="https://www.instagram.com/bubbles.db/"><i class="fa fa-instagram"></i></a>
@@ -200,7 +201,7 @@
     <div class="row">
       <div class="col-lg-12 text-center">
         <h2 class="section-heading">Familia Bubbles</h2>
-        <img src="images/proximamente.png" style="max-width: 100%">
+        <img src="images/proximamente.png" style="max-width: 100%" alt="proximamente">
       </div>
     </div>
   </div>
@@ -413,6 +414,14 @@
 
                 <p class="help-block text-danger"></p>
               </div>
+              <div class="form-group">
+                <input type="" class="form-control" placeholder="Tu teléfono *" id="phone" required
+                       data-validation-required-message="Por favor ingresa tu número telefónico.">
+
+                <p class="help-block text-danger"></p>
+                <div id="recapcha" class="g-recaptcha" data-sitekey="6LdftRsTAAAAAL8Tf9PVBdBUmAG9ZhG_qPhzk5yZ" required
+                     data-validation-required-message="Por favor confirma que no eres un robot."></div>
+              </div>
             </div>
             <div class="col-md-6">
               <div class="form-group">
@@ -458,7 +467,7 @@
           <div class="modal-body">
             <!--Slider -->
             <div class="slider-ninos">
-              <div><img src="images/nino/nino.jpg">
+              <div><img src="images/nino/nino.jpg" alt="">
                 <h2>Niños</h2></div>
               <div><img src="images/nino/bermudarombos.jpg">
                 <h2>Referencia: NN001</h2></div>
@@ -640,6 +649,13 @@
 
 <!--Bootstrap tooltip-->
 <script src="javascript/bootstraptooltips.js"></script>
+
+<script>
+  if(grecaptcha.getResponse() == "")
+    alert("You can't proceed!");
+  else
+    alert("Thank you");
+</script>
 
 </body>
 </html>
